@@ -31,12 +31,12 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 
 	return (
 		<nav
-			className={`fixed left-0 top-0 z-50 flex h-[80px] w-full items-center justify-between px-8 py-4 text-brand-primary transition-colors ${isScrolled && !isOpen && "bg-white !text-brand-primary shadow-md"}`}
+			className={`fixed left-0 top-0 z-50 flex h-[80px] w-full items-center justify-between px-8 py-4 text-brand-primary-dark transition-colors ${isScrolled && !isOpen && "bg-white !text-brand-primary shadow-md"}`}
 		>
 			<div className="mx-auto flex w-full max-w-5xl items-center justify-between">
 				<div>
 					<Link href="/" className={`hidden h-full ${isScrolled && !isOpen && "!block"}`}>
-						<NextImage src="/logo-normal.png" alt="Logo" width={50} height={50} />
+						<NextImage src="/images/logo-normal.png" alt="Logo" width={50} height={50} />
 					</Link>
 				</div>
 				<button
@@ -62,7 +62,7 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 						></span>
 					</div>
 				</button>
-				<ul className="hidden gap-4 md:flex">
+				<ul className="hidden gap-4 font-semibold md:flex">
 					{NAV_ITEMS.map((item) => (
 						<li key={item.href}>
 							<Link href={item.href}>{item.label}</Link>

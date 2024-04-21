@@ -18,7 +18,7 @@ export const Sidebar = ({ isOpen, toggle }: Readonly<SidebarProps>) => {
 				className="fixed top-0 z-50 flex h-full items-center gap-4 bg-white p-4 px-6 py-8 text-brand-primary shadow-md transition-all"
 				style={{ opacity: `${isOpen ? "1" : "0"}`, right: `${isOpen ? "0" : "-100%"}` }}
 			>
-				<ul className="flex w-full flex-col gap-6 p-4 text-2xl">
+				<ul className="flex w-full flex-col gap-6 p-4 text-2xl font-semibold">
 					{NAV_ITEMS.map((item) => (
 						<li key={item.href}>
 							<ActiveLink

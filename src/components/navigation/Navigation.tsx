@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { Navbar } from "@/components/navigation/navbar";
-import { Sidebar } from "@/components/navigation/sidebar";
+import { Navbar } from "@/components/navigation/navbar/Navbar";
+import { Sidebar } from "@/components/navigation/sidebar/Sidebar";
 
 export const Navigation = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
