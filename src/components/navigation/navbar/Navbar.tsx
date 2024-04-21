@@ -3,6 +3,7 @@ import NextImage from "next/image";
 
 import { useEffect, useState } from "react";
 import { NAV_ITEMS } from "@/constants";
+import { ActiveLink } from "@/components/common/ActiveLink";
 
 type NavbarProps = {
 	isOpen: boolean;
@@ -65,7 +66,9 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 				<ul className="hidden gap-4 font-semibold md:flex">
 					{NAV_ITEMS.map((item) => (
 						<li key={item.href}>
-							<Link href={item.href}>{item.label}</Link>
+							<ActiveLink href={item.href} activeClassName="underline">
+								{item.label}
+							</ActiveLink>
 						</li>
 					))}
 				</ul>
