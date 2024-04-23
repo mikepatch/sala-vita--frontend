@@ -1,13 +1,14 @@
-import NextImage from "next/image";
-import Link from "next/link";
+import sectionImg from "../../../../public/images/1.jpeg";
+import { LinkButton } from "@/components/common/LinkButton";
+import { IntroSectionImage } from "@/components/common/IntroSectionImage";
+import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
+import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
 
 export const AboutIntro = () => {
 	return (
-		<section className="container flex flex-col gap-6 xl:flex-row xl:justify-between xl:gap-12">
+		<IntroSectionContainer layout="row">
 			<article className="flex flex-col px-8 xl:max-w-lg">
-				<header>
-					<h2 className="py-6  text-4xl font-bold text-brand-primary">Sala VITA</h2>
-				</header>
+				<IntroSectionHeader title="O nas" />
 				<div className="flex flex-col gap-6">
 					<p>
 						<strong>Sala bankietowa VITA</strong> to miejsce stworzone z myślą o organizacji
@@ -24,23 +25,12 @@ export const AboutIntro = () => {
 						dla nich wydarzenia. Nasz doświadczony zespół zadba o to, aby Państwa impreza przebiegła
 						sprawnie i spełniła Państwa oczekiwania.
 					</p>
-					<Link
-						href="/onas"
-						className="self-start rounded-sm border border-brand-primary border-opacity-60 bg-white px-6 py-3 text-center text-brand-primary shadow-sm transition-colors "
-					>
-						Dowiedz się więcej
-					</Link>
+					<LinkButton href="#kontakt" className="self-start">
+						Kontakt
+					</LinkButton>
 				</div>
 			</article>
-			<figure className="h-[600px] max-w-full overflow-hidden xl:basis-1/2 xl:rounded-sm">
-				<NextImage
-					src="/images/1.jpeg"
-					alt="2"
-					width={1500}
-					height={1500}
-					className="h-full w-full animate-fade-right object-cover object-center"
-				/>
-			</figure>
-		</section>
+			<IntroSectionImage img={sectionImg} alt="Udekorowany stół z zastawą" />
+		</IntroSectionContainer>
 	);
 };
