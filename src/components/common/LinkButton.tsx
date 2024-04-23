@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { type Route } from "next";
 import Link from "next/link";
 
@@ -11,7 +12,10 @@ export const LinkButton = ({ href, children, className = "", ...props }: TLinkBu
 	return (
 		<Link
 			href={href}
-			className={`self-start rounded-sm border border-brand-primary border-opacity-60 bg-brand-primary px-6 py-3 text-center font-bold text-white shadow-sm transition-colors hover:bg-white hover:text-brand-primary ${className}`}
+			className={clsx(
+				"rounded-sm border border-brand-primary border-opacity-60 bg-brand-primary px-6 py-3 text-center font-bold text-white shadow-sm transition-colors hover:bg-white hover:text-brand-primary",
+				className,
+			)}
 			{...props}
 		>
 			{children}
