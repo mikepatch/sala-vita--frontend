@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type Route } from "next";
+import clsx from "clsx";
 
 type ActiveLinkProps = {
 	children: React.ReactNode;
@@ -32,7 +33,7 @@ export const ActiveLink = ({
 		<Link
 			aria-current={isActive ? "page" : undefined}
 			href={`${href}` as Route}
-			className={`${className}, ${isActive && activeClassName}`}
+			className={clsx(className, { [activeClassName]: isActive })}
 			target={target}
 			aria-label={ariaLabel}
 			aria-disabled={disabled}
