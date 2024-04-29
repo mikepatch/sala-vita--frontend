@@ -11,9 +11,9 @@ export const Navigation = () => {
 	const toggle = () => setIsOpen(!isOpen);
 
 	return (
-		<nav>
+		<header className="fixed left-0 top-0 z-50 w-full">
 			<Sidebar isOpen={isOpen} toggle={toggle} />
 			<Navbar isOpen={isOpen} toggle={toggle} />
-		</nav>
+		</header>
 	);
 };
