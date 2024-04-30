@@ -1,7 +1,10 @@
+import { type Route } from "next";
+
 export type TOfferItem = {
 	id: string;
 	title: string;
 	shortDescription: string;
+	description: string;
 };
 
 export type TContactItem = {
@@ -9,4 +12,9 @@ export type TContactItem = {
 	title: string;
 	content: string;
 	href: string;
+};
+
+export type TNavItem = {
+	href: Route;
+	label: string;
 };
