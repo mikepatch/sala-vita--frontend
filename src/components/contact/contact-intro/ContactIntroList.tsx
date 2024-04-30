@@ -1,12 +1,28 @@
 import Link from "next/link";
 
+import clsx from "clsx";
 import { CONTACT_ITEMS } from "@/constants";
 
-export const ContactIntroList = () => {
+type ContactIntroListProps = {
+	direction?: "column" | "row";
+};
+
+export const ContactIntroList = ({ direction }: ContactIntroListProps) => {
 	return (
-		<ul className="flex flex-col gap-6 xl:flex-row xl:justify-evenly">
+		<ul
+			className={clsx(
+				"flex flex-col gap-6",
+				direction === "row" && "xl:flex-row xl:justify-evenly",
+			)}
+		>
 			{CONTACT_ITEMS.map((item) => (
-				<li key={item.title} className="flex flex-col gap-2 text-brand-primary xl:items-center">
+				<li
+					key={item.title}
+					className={clsx(
+						"flex flex-col gap-2 text-brand-primary",
+						direction === "row" && "xl:items-center",
+					)}
+				>
 					<header className="flex items-center gap-2">
 						{item.icon}
 						<h3 className="text-xl font-bold">{item.title}</h3>
