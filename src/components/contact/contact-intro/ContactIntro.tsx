@@ -12,7 +12,7 @@ export const ContactIntro = () => {
 						Chcesz zorganizować wydarzenie w <strong>VITA</strong>? Skontaktuj się z nami, a
 						pomożemy Ci w zorganizowaniu Twojego wydarzenia.
 					</p>
-					<ContactIntroList />
+					<ContactIntroList direction="row" />
 				</div>
 			</article>
 			<iframe
