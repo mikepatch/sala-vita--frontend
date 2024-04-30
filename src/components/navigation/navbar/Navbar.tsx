@@ -12,7 +12,7 @@ type NavbarProps = {
 
 export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 	const [isScrolled, setIsScrolled] = useState(false);
-	const hamburgerLineClassName = `block absolute h-0.5 w-7 rounded-md transition ease-in-out transform duration-500 ${isScrolled || isOpen ? "bg-brand-primary" : "bg-brand-primary"}`;
+	const hamburgerLineClassName = `block absolute h-0.5 w-7 rounded-md transition ease-in-out transform duration-500 bg-brand-primary`;
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -32,14 +32,12 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 
 	return (
 		<nav
-			className={`fixed left-0 top-0 z-50 flex h-[80px] w-full items-center justify-between px-8 py-4 text-brand-primary-dark transition-colors ${isScrolled && !isOpen && "bg-white !text-brand-primary shadow-md"}`}
+			className={`h-navbar flex w-full items-center justify-between bg-white px-8 py-4 text-brand-primary shadow-md transition-all ${isScrolled && "h-navbar-small"}`}
 		>
 			<div className="mx-auto flex w-full max-w-5xl items-center justify-between">
-				<div>
-					<Link href="/" className={`hidden h-full ${isScrolled && !isOpen && "!block"}`}>
-						<NextImage src="/images/logo-normal.png" alt="Logo" width={50} height={50} />
-					</Link>
-				</div>
+				<Link href="/" className="h-full">
+					<NextImage src="/images/logo-normal.png" alt="Logo" width={50} height={50} />
+				</Link>
 				<button
 					type="button"
 					onClick={toggle}
@@ -48,17 +46,14 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 					tabIndex={0}
 				>
 					<span className="sr-only">Open menu</span>
-					<div className="relative w-7">
+					<div className="relative w-7" aria-hidden="true">
 						<span
-							aria-hidden="true"
 							className={`${hamburgerLineClassName} ${isOpen ? "rotate-45" : "-translate-y-1.5"}`}
 						></span>
 						<span
-							aria-hidden="true"
 							className={`${hamburgerLineClassName} ${isOpen && "translate-x-full opacity-0"}`}
 						></span>
 						<span
-							aria-hidden="true"
 							className={`${hamburgerLineClassName} ${isOpen ? "-rotate-45" : "translate-y-1.5"}`}
 						></span>
 					</div>
