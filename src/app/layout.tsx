@@ -17,13 +17,11 @@ type RootLayoutProps = {
 	children: React.ReactNode;
 };
 
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
-		<html lang="pl" className="scroll-pt-header scroll-smooth ">
+		<html lang="pl" className="scroll-pt-navbar-small scroll-smooth">
 			<body className={`${poppins.className} bg-white text-brand-primary-dark antialiased`}>
-				<header>
-					<Navigation />
-				</header>
+				<Navigation />
 				{children}
 				<Footer />
 			</body>
