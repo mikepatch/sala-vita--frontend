@@ -32,7 +32,7 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 
 	return (
 		<nav
-			className={`h-navbar flex w-full items-center justify-between bg-white px-8 py-4 text-brand-primary shadow-md transition-all ${isScrolled && "h-navbar-small"}`}
+			className={`flex h-navbar w-full items-center justify-between bg-white px-8 py-4 text-brand-primary shadow-md transition-all ${isScrolled && "h-navbar-small"}`}
 		>
 			<div className="mx-auto flex w-full max-w-5xl items-center justify-between">
 				<Link href="/" className="h-full">
@@ -49,19 +49,23 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 					<div className="relative w-7" aria-hidden="true">
 						<span
 							className={`${hamburgerLineClassName} ${isOpen ? "rotate-45" : "-translate-y-1.5"}`}
-						></span>
+						/>
 						<span
 							className={`${hamburgerLineClassName} ${isOpen && "translate-x-full opacity-0"}`}
-						></span>
+						/>
 						<span
 							className={`${hamburgerLineClassName} ${isOpen ? "-rotate-45" : "translate-y-1.5"}`}
-						></span>
+						/>
 					</div>
 				</button>
 				<ul className="hidden gap-4 font-semibold md:flex">
 					{NAV_ITEMS.map((item) => (
 						<li key={item.href}>
-							<ActiveLink href={item.href} activeClassName="underline">
+							<ActiveLink
+								href={item.href}
+								className="border-b-2 border-transparent !border-opacity-50 py-1 transition-colors hover:border-brand-primary-light hover:text-brand-primary-light"
+								activeClassName="text-brand-primary-light !border-brand-primary-light"
+							>
 								{item.label}
 							</ActiveLink>
 						</li>
