@@ -1,8 +1,8 @@
-import { Gallery } from "@/components/common/gallery/Gallery";
-import { GALLERY_INTRO_IMAGES } from "@/constants";
+import { GALLERY_IMAGES } from "@/constants";
 import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
 import { LinkButton } from "@/components/common/LinkButton";
 import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
+import { PhotoGallery } from "@/components/common/PhotoAlbum/PhotoGallery";
 
 export const GalleryIntro = () => {
 	return (
@@ -14,7 +14,9 @@ export const GalleryIntro = () => {
 						Zapoznaj się z naszą galerią, aby zobaczyć jak wygląda nasza sala bankietowa oraz
 						wydarzenia, które w niej organizujemy.
 					</p>
-					<Gallery photos={GALLERY_INTRO_IMAGES} carousel carouselThumbnails />
+					<div className="w-full">
+						<PhotoGallery photos={GALLERY_IMAGES.slice(0, 6)} />
+					</div>
 					<LinkButton href="/galeria">Zobacz całą galerię</LinkButton>
 				</div>
 			</article>
