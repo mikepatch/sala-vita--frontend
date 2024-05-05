@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { type TPhoto } from "@/components/common/gallery/types";
+import { type Photo } from "react-photo-album";
 import { type TNavItem, type TContactItem, type TOfferItem } from "@/types";
 
 export const NAV_ITEMS: TNavItem[] = [
@@ -58,11 +58,77 @@ export const CONTACT_ITEMS: TContactItem[] = [
 	},
 ];
 
-export const GALLERY_INTRO_IMAGES: TPhoto[] = [
-	{ id: 1, src: "/images/1.jpeg", alt: "1" },
-	{ id: 2, src: "/images/2.jpg", alt: "2" },
-	{ id: 3, src: "/images/3.jpg", alt: "3" },
-	{ id: 4, src: "/images/4.jpg", alt: "4" },
-	{ id: 5, src: "/images/5.jpg", alt: "5" },
-	{ id: 6, src: "/images/6.jpg", alt: "6" },
+export const GALLERY_IMAGES: Photo[] = [
+	{
+		src: "/images/1.jpeg",
+		width: 2000,
+		height: 2000,
+		alt: "1",
+	},
+	{
+		src: "/images/2.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "2",
+	},
+	{
+		src: "/images/3.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "3",
+	},
+	{
+		src: "/images/4.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "4",
+	},
+	{
+		src: "/images/5.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "5",
+	},
+	{
+		src: "/images/6.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "6",
+	},
+	{
+		src: "/images/7.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "7",
+	},
+	{
+		src: "/images/8.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "8",
+	},
+	{
+		src: "/images/9.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "9",
+	},
+	{
+		src: "/images/10.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "10",
+	},
+	{
+		src: "/images/11.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "11",
+	},
+	{
+		src: "/images/12.jpg",
+		width: 2000,
+		height: 2000,
+		alt: "12",
+	},
 ];
