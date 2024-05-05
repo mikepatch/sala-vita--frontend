@@ -2,6 +2,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 
 import { useEffect, useState } from "react";
+import clsx from "clsx";
 import { NAV_ITEMS } from "@/constants";
 import { ActiveLink } from "@/components/common/ActiveLink";
 
@@ -32,7 +33,10 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 
 	return (
 		<nav
-			className={`flex h-navbar w-full items-center justify-between bg-white px-8 py-4 text-brand-primary shadow-md transition-all ${isScrolled && "h-navbar-small"}`}
+			className={clsx(
+				"flex h-navbar w-full items-center justify-between bg-white px-8 py-4 text-brand-primary shadow-md transition-all",
+				{ "h-navbar-small": isScrolled },
+			)}
 		>
 			<div className="mx-auto flex w-full max-w-5xl items-center justify-between">
 				<Link href="/" className="h-full">
@@ -41,20 +45,20 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 				<button
 					type="button"
 					onClick={toggle}
-					className={`relative z-50 flex aspect-square h-12 items-center justify-center overflow-hidden md:hidden`}
+					className="relative z-50 flex aspect-square h-12 items-center justify-center overflow-hidden md:hidden"
 					aria-label="Open menu"
 					tabIndex={0}
 				>
 					<span className="sr-only">Open menu</span>
 					<div className="relative w-7" aria-hidden="true">
 						<span
-							className={`${hamburgerLineClassName} ${isOpen ? "rotate-45" : "-translate-y-1.5"}`}
+							className={clsx(hamburgerLineClassName, isOpen ? "rotate-45" : "-translate-y-1.5")}
 						/>
 						<span
-							className={`${hamburgerLineClassName} ${isOpen && "translate-x-full opacity-0"}`}
+							className={clsx(hamburgerLineClassName, isOpen && "translate-x-full opacity-0")}
 						/>
 						<span
-							className={`${hamburgerLineClassName} ${isOpen ? "-rotate-45" : "translate-y-1.5"}`}
+							className={clsx(hamburgerLineClassName, isOpen ? "-rotate-45" : "translate-y-1.5")}
 						/>
 					</div>
 				</button>
