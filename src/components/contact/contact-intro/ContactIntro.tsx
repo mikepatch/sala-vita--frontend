@@ -4,15 +4,15 @@ import { ContactIntroList } from "@/components/contact/contact-intro/ContactIntr
 
 export const ContactIntro = () => {
 	return (
-		<IntroSectionContainer id="kontakt">
-			<article className="flex w-full flex-col px-8 xl:items-center">
+		<IntroSectionContainer layout="row-reverse">
+			<article className="flex w-full flex-col px-8 lg:max-w-lg">
 				<IntroSectionHeader title="Kontakt" />
 				<div className="flex flex-col gap-6">
 					<p>
 						Chcesz zorganizować wydarzenie w <strong>VITA</strong>? Skontaktuj się z nami, a
 						pomożemy Ci w zorganizowaniu Twojego wydarzenia.
 					</p>
-					<ContactIntroList direction="row" />
+					<ContactIntroList direction="column" />
 				</div>
 			</article>
 			<iframe
@@ -24,7 +24,7 @@ export const ContactIntro = () => {
 				loading="lazy"
 				allowFullScreen
 				referrerPolicy="no-referrer-when-downgrade"
-				className="h-[400px] w-full max-w-full overflow-hidden xl:rounded-sm"
+				className="max-w-full overflow-hidden lg:basis-1/2 lg:rounded-sm"
 			/>
 		</IntroSectionContainer>
 	);
