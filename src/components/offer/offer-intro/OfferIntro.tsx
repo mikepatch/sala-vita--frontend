@@ -8,7 +8,7 @@ import { OfferIntroFeatureList } from "@/components/offer/offer-intro/OfferIntro
 export const OfferIntro = () => {
 	return (
 		<IntroSectionContainer layout="row-reverse">
-			<article className="flex flex-col px-8 xl:max-w-lg">
+			<article className="flex flex-col px-8 lg:max-w-lg">
 				<IntroSectionHeader title="Oferta" />
 				<div className="flex flex-col gap-6">
 					<p>
