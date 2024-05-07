@@ -12,7 +12,7 @@ export const ContactIntroList = ({ direction }: ContactIntroListProps) => {
 		<ul
 			className={clsx(
 				"flex flex-col gap-6",
-				direction === "row" && "xl:flex-row xl:justify-evenly",
+				direction === "row" && "lg:flex-row lg:justify-evenly",
 			)}
 		>
 			{CONTACT_ITEMS.map((item) => (
@@ -20,7 +20,7 @@ export const ContactIntroList = ({ direction }: ContactIntroListProps) => {
 					key={item.title}
 					className={clsx(
 						"flex flex-col gap-2 text-brand-primary",
-						direction === "row" && "xl:items-center",
+						direction === "row" && "lg:items-center",
 					)}
 				>
 					<header className="flex items-center gap-2">
