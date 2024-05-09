@@ -7,7 +7,7 @@ import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
 export const AboutIntro = () => {
 	return (
 		<IntroSectionContainer layout="row">
-			<article className="flex flex-col px-8 xl:max-w-lg">
+			<article className="flex flex-col px-8 lg:max-w-lg">
 				<IntroSectionHeader title="O nas" />
 				<div className="flex flex-col gap-6">
 					<p>
