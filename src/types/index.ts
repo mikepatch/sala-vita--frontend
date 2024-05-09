@@ -18,3 +18,8 @@ export type TNavItem = {
 	href: Route;
 	label: string;
 };
+
+export type TDishes = {
+	title: string;
+	meals: string[];
+};
