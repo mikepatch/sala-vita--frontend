@@ -1,9 +1,9 @@
-import sectionImg from "../../../../public/images/6.jpg";
+import sectionImg from "../../../public/images/sala-bankietowa-vita-6.jpg";
 import { LinkButton } from "@/components/common/LinkButton";
 import { IntroSectionImage } from "@/components/common/IntroSectionImage";
 import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
 import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
-import { OfferIntroFeatureList } from "@/components/offer/offer-intro/OfferIntroFeatureList";
+import { OfferIntroFeatureList } from "@/components/offer/OfferIntroFeatureList";
 
 export const OfferIntro = () => {
 	return (
