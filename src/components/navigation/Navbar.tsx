@@ -1,8 +1,8 @@
 import Link from "next/link";
 import NextImage from "next/image";
 
-import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { NAV_ITEMS } from "@/constants";
 import { ActiveLink } from "@/components/common/ActiveLink";
 
@@ -12,31 +12,14 @@ type NavbarProps = {
 };
 
 export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
-	const [isScrolled, setIsScrolled] = useState(false);
 	const hamburgerLineClassName = `block absolute h-0.5 w-7 rounded-md transition ease-in-out transform duration-500 bg-brand-primary`;
-
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 100) {
-				setIsScrolled(true);
-			} else {
-				setIsScrolled(false);
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+	const { scrollY } = useScroll();
+	const height = useTransform(scrollY, [0, 150], [100, 70]);
 
 	return (
-		<nav
-			className={clsx(
-				"flex h-navbar w-full items-center justify-between bg-white px-8 py-4 text-brand-primary shadow-md transition-all",
-				{ "h-navbar-small": isScrolled },
-			)}
+		<motion.nav
+			className="flex  w-full items-center justify-between bg-white px-8 py-4 text-brand-primary shadow-md"
+			style={{ height }}
 		>
 			<div className="mx-auto flex w-full max-w-5xl items-center justify-between">
 				<Link href="/" className="h-full">
@@ -76,6 +59,6 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 					))}
 				</ul>
 			</div>
-		</nav>
+		</motion.nav>
 	);
 };
