@@ -2,14 +2,17 @@ import { SiFacebook, SiInstagram } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { CONTACT_ITEMS, NAV_ITEMS } from "@/constants";
 import { ActiveLink } from "@/components/common/ActiveLink";
+import { Heading } from "@/components/common/Heading";
 
 export const Footer = () => {
 	return (
-		<footer className=" bg-brand-primary text-white">
+		<footer className="relative z-10 bg-brand-primary text-white">
 			<div className="container mx-auto p-8">
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 					<div>
-						<h3 className="text-xl font-bold">Kontakt</h3>
+						<Heading level={2} className="!text-xl text-white">
+							Kontakt
+						</Heading>
 						<ul className="mt-2 flex flex-col gap-2">
 							{CONTACT_ITEMS.map((item) => (
 								<li key={item.title}>
@@ -22,14 +25,18 @@ export const Footer = () => {
 						</ul>
 					</div>
 					<div>
-						<h3 className="text-xl font-bold">O nas</h3>
+						<Heading level={2} className="!text-xl text-white">
+							O nas
+						</Heading>
 						<p className="mt-2">
 							Sala bankietowa <strong className="text-white">VITA</strong> to miejsce stworzone z
 							myślą o organizacji wyjątkowych wydarzeń.
 						</p>
 					</div>
 					<div>
-						<h3 className="text-xl font-bold">Mapa strony</h3>
+						<Heading level={2} className="!text-xl text-white">
+							Mapa strony
+						</Heading>
 						<ul className="mt-2 flex flex-col gap-2">
 							{NAV_ITEMS.map((item) => (
 								<li key={item.href}>
@@ -46,7 +53,9 @@ export const Footer = () => {
 						</ul>
 					</div>
 					<div>
-						<h3 className="text-xl font-bold">Social media</h3>
+						<Heading level={2} className="!text-xl text-white">
+							Social media
+						</Heading>
 						<ul className="mt-2 flex flex-col gap-2">
 							<li>
 								<Link
