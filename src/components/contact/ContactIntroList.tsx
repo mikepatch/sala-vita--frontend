@@ -1,7 +1,8 @@
 import Link from "next/link";
-
 import clsx from "clsx";
+
 import { CONTACT_ITEMS } from "@/constants";
+import { Heading } from "@/components/common/Heading";
 
 type ContactIntroListProps = {
 	direction?: "column" | "row";
@@ -25,7 +26,7 @@ export const ContactIntroList = ({ direction }: ContactIntroListProps) => {
 				>
 					<header className="flex items-center gap-2">
 						{item.icon}
-						<h3 className="text-xl font-bold">{item.title}</h3>
+						<Heading level={3}>{item.title}</Heading>
 					</header>
 					<Link
 						href={item.href}

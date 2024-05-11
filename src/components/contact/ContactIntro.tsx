@@ -1,6 +1,6 @@
 import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
 import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
-import { ContactIntroList } from "@/components/contact/contact-intro/ContactIntroList";
+import { ContactIntroList } from "@/components/contact/ContactIntroList";
 
 export const ContactIntro = () => {
 	return (
