@@ -1,4 +1,4 @@
-import sectionImg from "../../../../public/images/1.jpeg";
+import sectionImg from "../../../public/images/sala-bankietowa-vita-1.jpg";
 import { LinkButton } from "@/components/common/LinkButton";
 import { IntroSectionImage } from "@/components/common/IntroSectionImage";
 import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
@@ -25,7 +25,7 @@ export const AboutIntro = () => {
 						dla nich wydarzenia. Nasz doświadczony zespół zadba o to, aby Państwa impreza przebiegła
 						sprawnie i spełniła Państwa oczekiwania.
 					</p>
-					<LinkButton href="#kontakt" className="self-start">
+					<LinkButton href="/kontakt" className="self-start">
 						Kontakt
 					</LinkButton>
 				</div>
