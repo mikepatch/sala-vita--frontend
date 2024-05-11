@@ -14,10 +14,10 @@ export const Heading = ({ level, children, className = "" }: HeadingProps) => {
 			className={clsx("font-bold text-brand-primary", className, {
 				"text-4xl sm:text-5xl": level === 1,
 				"text-3xl sm:text-4xl": level === 2,
-				"text-2xl sm:text-3xl": level === 3,
-				"text-xl sm:text-2xl": level === 4,
-				"text-lg sm:text-xl": level === 5,
-				"text-md sm:text-lg": level === 6,
+				"text-xl sm:text-2xl": level === 3,
+				"text-lg sm:text-xl": level === 4,
+				"text-md sm:text-md": level === 5,
+				"text-sm sm:text-sm": level === 6,
 			})}
 		>
 			{children}
