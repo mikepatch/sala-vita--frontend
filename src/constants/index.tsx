@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { type Photo } from "react-photo-album";
+
 import { type TNavItem, type TContactItem, type TOfferItem, type TDishes } from "@/types";
 
 export const NAV_ITEMS: TNavItem[] = [
@@ -41,8 +42,8 @@ export const CONTACT_ITEMS: TContactItem[] = [
 	{
 		icon: <Mail size={22} strokeWidth={2} />,
 		title: "E-mail",
-		content: "example@example.com",
-		href: "mailto:example@example.com",
+		content: "kontakt@sala-vita.pl",
+		href: "mailto:kontakt@sala-vita.pl",
 	},
 	{
 		icon: <Phone size={22} strokeWidth={2} />,
@@ -60,73 +61,73 @@ export const CONTACT_ITEMS: TContactItem[] = [
 
 export const GALLERY_IMAGES: Photo[] = [
 	{
-		src: "/images/1.jpeg",
+		src: "/images/sala-bankietowa-vita-1.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "1",
 	},
 	{
-		src: "/images/2.jpg",
+		src: "/images/sala-bankietowa-vita-2.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "2",
 	},
 	{
-		src: "/images/3.jpg",
+		src: "/images/sala-bankietowa-vita-3.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "3",
 	},
 	{
-		src: "/images/4.jpg",
+		src: "/images/sala-bankietowa-vita-4.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "4",
 	},
 	{
-		src: "/images/5.jpg",
+		src: "/images/sala-bankietowa-vita-5.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "5",
 	},
 	{
-		src: "/images/6.jpg",
+		src: "/images/sala-bankietowa-vita-6.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "6",
 	},
 	{
-		src: "/images/7.jpg",
+		src: "/images/sala-bankietowa-vita-7.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "7",
 	},
 	{
-		src: "/images/8.jpg",
+		src: "/images/sala-bankietowa-vita-8.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "8",
 	},
 	{
-		src: "/images/9.jpg",
+		src: "/images/sala-bankietowa-vita-9.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "9",
 	},
 	{
-		src: "/images/10.jpg",
+		src: "/images/sala-bankietowa-vita-10.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "10",
 	},
 	{
-		src: "/images/11.jpg",
+		src: "/images/sala-bankietowa-vita-11.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "11",
 	},
 	{
-		src: "/images/12.jpg",
+		src: "/images/sala-bankietowa-vita-12.jpg",
 		width: 2000,
 		height: 2000,
 		alt: "12",
@@ -135,7 +136,7 @@ export const GALLERY_IMAGES: Photo[] = [
 
 export const dishes: TDishes[] = [
 	{
-		title: "Obiad",
+		title: "Obiady",
 		meals: [
 			"Rosół z makaronem lub zupa-krem (z pieczarek, białych warzyw, zielonych warzyw, pomidorów lub pora) z groszkiem ptysiowym lub grzankami",
 			"Rolada wołowa w sosie",
@@ -194,7 +195,7 @@ export const dishes: TDishes[] = [
 		],
 	},
 	{
-		title: "Kolacja",
+		title: "Kolacje",
 		meals: [
 			"Barszczyk z krokietem lub pasztecikiem z mięsem",
 			"Żurek z jajkiem i kiełbasą",
