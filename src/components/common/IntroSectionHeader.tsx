@@ -1,3 +1,5 @@
+import { Heading } from "@/components/common/Heading";
+
 type IntroSectionHeaderProps = {
 	title: string;
 };
@@ -5,7 +7,9 @@ type IntroSectionHeaderProps = {
 export const IntroSectionHeader = ({ title }: IntroSectionHeaderProps) => {
 	return (
 		<header>
-			<h2 className="py-6 text-4xl font-bold text-brand-primary">{title}</h2>
+			<Heading level={2} className="py-6 text-4xl font-bold">
+				{title}
+			</Heading>
 		</header>
 	);
 };
