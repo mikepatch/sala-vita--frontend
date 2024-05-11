@@ -26,6 +26,7 @@ export const PhotoGallery = ({ photos }: PhotoGalleryProps) => {
 				layout="rows"
 				renderPhoto={NextJsGalleryImage}
 				onClick={({ index }) => setCurrentImageIndex(index)}
+				defaultContainerWidth={1200}
 				sizes={{
 					size: "calc(100vw - 40px)",
 					sizes: [

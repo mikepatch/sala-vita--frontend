@@ -40,7 +40,7 @@ export const NextJsSlideImage = ({ slide, offset, rect }: RenderSlideProps) => {
 				fill
 				alt=""
 				src={slide}
-				loading="eager"
+				loading="lazy"
 				draggable={false}
 				placeholder={slide.blurDataURL ? "blur" : undefined}
 				style={{

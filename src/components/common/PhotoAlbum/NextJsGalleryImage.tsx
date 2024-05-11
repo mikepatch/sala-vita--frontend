@@ -8,10 +8,14 @@ export const NextJsGalleryImage = ({
 	wrapperStyle,
 }: RenderPhotoProps) => {
 	return (
-		<figure style={{ ...wrapperStyle, position: "relative" }}>
+		<figure
+			style={{ ...wrapperStyle, position: "relative" }}
+			className="overflow-hidden rounded-sm"
+		>
 			<NextImage
 				fill
 				src={photo}
+				loading="lazy"
 				placeholder={"blurDataURL" in photo ? "blur" : undefined}
 				className={clsx(className, "object-cover object-center transition-all hover:brightness-90")}
 				{...{ alt, title, sizes, onClick }}
