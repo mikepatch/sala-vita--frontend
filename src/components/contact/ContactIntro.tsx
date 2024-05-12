@@ -1,6 +1,6 @@
 import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
 import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
-import { ContactIntroList } from "@/components/contact/ContactIntroList";
+import { ContactItemList } from "@/components/contact/ContactItemList";
 
 export const ContactIntro = () => {
 	return (
@@ -12,7 +12,7 @@ export const ContactIntro = () => {
 						Chcesz zorganizować wydarzenie w <strong>VITA</strong>? Skontaktuj się z nami, a
 						pomożemy Ci w zorganizowaniu Twojego wydarzenia.
 					</p>
-					<ContactIntroList direction="column" />
+					<ContactItemList direction="column" />
 				</div>
 			</article>
 			<iframe

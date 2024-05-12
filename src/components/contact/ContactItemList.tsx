@@ -8,7 +8,7 @@ type ContactIntroListProps = {
 	direction?: "column" | "row";
 };
 
-export const ContactIntroList = ({ direction }: ContactIntroListProps) => {
+export const ContactItemList = ({ direction }: ContactIntroListProps) => {
 	return (
 		<ul
 			className={clsx(
