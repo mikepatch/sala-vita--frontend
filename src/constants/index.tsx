@@ -1,5 +1,9 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { type Photo } from "react-photo-album";
+import weddingEventsImg from "../../public/images/sala-bankietowa-vita-1.jpg";
+import baptismEventsImg from "../../public/images/sala-bankietowa-vita-2.jpg";
+import businessEventsImg from "../../public/images/sala-bankietowa-vita-4.jpg";
+import occasionalEventsImg from "../../public/images/sala-bankietowa-vita-6.jpg";
 
 import { type TNavItem, type TContactItem, type TOfferItem, type TDishes } from "@/types";
 
@@ -16,25 +20,32 @@ export const OFFER_ITEMS: TOfferItem[] = [
 		id: "weddings",
 		title: "Wesela",
 		shortDescription: "Organizujemy wesela na miarę marzeń.",
-		description: `Naszą specjalnością są wesela. Oferujemy kompleksową organizację przyjęć weselnych. Nasi kucharze przygotują pyszne, tradycyjne dania, a nasz zespół zadba o oprawę muzyczną i dekoracje, aby Państwa ślub był wyjątkowy. Standardowy pakiet weselny obejmuje przystawkę, zupę, danie główne, deser oraz napoje, ale istnieje również możliwość skomponowania własnego, indywidualnego menu.`,
+		description:
+			"Naszą specjalnością są wesela. Oferujemy kompleksową organizację przyjęć weselnych. Nasi kucharze przygotują pyszne, tradycyjne dania, a nasz zespół zadba o oprawę muzyczną i dekoracje, aby Państwa wesele było wyjątkowe. Standardowy pakiet weselny obejmuje przystawkę, zupę, danie główne, deser oraz napoje, ale istnieje również możliwość skomponowania własnego, indywidualnego menu.",
+		image: weddingEventsImg,
 	},
 	{
 		id: "baptisms",
 		title: "Komunie i chrzciny",
 		shortDescription: "Przyjęcia komunijne oraz chrzciny w eleganckiej atmosferze.",
-		description: `Organizujemy przyjęcia komunijne i chrzciny. Nasza sala bankietowa to idealne miejsce na organizację takich wydarzeń. Chętnie dostosujemy się do Państwa preferencji i pomożemy w zorganizowaniu wymarzonego wydarzenia.`,
+		description:
+			"Organizujemy przyjęcia komunijne i chrzciny. Nasza sala bankietowa to idealne miejsce na organizację takich wydarzeń. Chętnie dostosujemy się do Państwa preferencji i pomożemy w zorganizowaniu wymarzonego wydarzenia.",
+		image: baptismEventsImg,
 	},
 	{
 		id: "corporate-events",
 		title: "Imprezy firmowe",
 		shortDescription: "Konferencje, szkolenia i inne imprezy firmowe.",
-		description: `Nasza sala bankietowa to idealne miejsce na organizację konferencji, szkoleń, bankietów i innych wydarzeń firmowych. Dysponujemy nowoczesnym zapleczem technicznym, a nasz zespół zadba o sprawną organizację i profesjonalną obsługę Państwa gości. Zapraszamy do zapoznania się z pełną ofertą na naszej stronie internetowej. Chętnie dostosujemy się do Państwa preferencji i pomożemy w zorganizowaniu wymarzonego wydarzenia.`,
+		description:
+			"Nasza sala bankietowa to idealne miejsce na organizację konferencji, szkoleń, bankietów i innych wydarzeń firmowych. Dysponujemy nowoczesnym zapleczem technicznym, a nasz zespół zadba o sprawną organizację i profesjonalną obsługę Państwa gości. Zapraszamy do zapoznania się z pełną ofertą na naszej stronie internetowej. Chętnie dostosujemy się do Państwa preferencji i pomożemy w zorganizowaniu wymarzonego wydarzenia.",
+		image: businessEventsImg,
 	},
 	{
 		id: "occasional-events",
 		title: "Imprezy okolicznościowe",
 		shortDescription: "Przyjęcia urodzinowe, jubileuszowe i inne.",
-		description: `Organizujemy również urodziny, chrzciny, komunie i inne imprezy rodzinne. Zadbamy o to, aby Państwa wydarzenie było pełne radości i pamiętane przez długi czas. Nasi kucharze przygotują pyszne dania, a nasz zespół zadba o oprawę muzyczną i dekoracje.`,
+		description: `Organizujemy również urodziny, inne imprezy rodzinne. Zadbamy o to, aby Państwa wydarzenie było pełne radości i pamiętane przez długi czas. Nasi kucharze przygotują pyszne dania, a nasz zespół zadba o oprawę muzyczną i dekoracje.`,
+		image: occasionalEventsImg,
 	},
 ];
 
@@ -134,7 +145,7 @@ export const GALLERY_IMAGES: Photo[] = [
 	},
 ];
 
-export const dishes: TDishes[] = [
+export const DISHES: TDishes[] = [
 	{
 		title: "Obiady",
 		meals: [
@@ -251,6 +262,50 @@ export const dishes: TDishes[] = [
 			"Faszerowany pomidory – różne rodzaje",
 			"Przysmaki z wiejskiego stołu (szynka, baleron, salceson, kiełbasa, smalec...)",
 			"Faszerowane sakiewki z ciasta francuskiego – różne nadzienia",
+		],
+	},
+];
+
+export const PROPOSAL_MENU: TDishes[] = [
+	{
+		title: "Obiad",
+		meals: [
+			"Rosół z makaronem",
+			"De volaille",
+			"Rolada wieprzowa z sosem",
+			"Kotlet schabowy po parysku",
+			"Kluski śląskie",
+			"Ziemniaki gotowane z koperkiem",
+			"Kapusta zasmażana",
+			"Surówka z czerwonej kapusty",
+			"Colesław",
+		],
+	},
+	{
+		title: "Deser",
+		meals: ["Stół słodkości i owoców", "Kawa i herbata bez limitu"],
+	},
+	{
+		title: "Przekąski zimne",
+		meals: [
+			"Półmiski mięs pieczonych (schab, karczek, boczek, pasztet)",
+			"Śledzik w oleju z cebulą",
+			"Deski serów z oliwkami, winogronem i orzechami",
+			"Sałatka gyros",
+			"Sałatka makaronowa z brokułem, kurczakiem i warzywami",
+			"Sałatka grecka",
+			"Galaretki wieprzowe",
+			"Kurczak w cieście francuskim",
+		],
+	},
+	{
+		title: "Kolacja do wyboru",
+		meals: [
+			"Barszczyk z krokietem",
+			"Bogracz",
+			"Kociołek myśliwego",
+			"Flaczki wołowe",
+			"Zupa gulaszowa",
 		],
 	},
 ];
