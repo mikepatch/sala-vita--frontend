@@ -1,20 +1,20 @@
-import { AboutIntro } from "@/components/about/about-intro/AboutIntro";
-import { ContactIntro } from "@/components/contact/contact-intro/ContactIntro";
-import { OfferIntro } from "@/components/offer/offer-intro/OfferIntro";
-import { GalleryIntro } from "@/components/gallery/gallery-intro/GalleryIntro";
-import { HeroIntro } from "@/components/hero/hero-intro/HeroIntro";
-import { ImageDivider } from "@/components/common/ImageDivider";
-import { PageContainer } from "@/components/common/PageContainer";
+import { AboutIntro } from "@/components/about/AboutIntro";
+import { ContactIntro } from "@/components/contact/ContactIntro";
+import { OfferIntro } from "@/components/offer/OfferIntro";
+import { GalleryIntro } from "@/components/gallery/GalleryIntro";
+import { HeroIntro } from "@/components/hero/HeroIntro";
+import { PageMainContainer } from "@/components/common/PageMainContainer";
 
-export default function Home() {
+export default function HomePage() {
 	return (
-		<PageContainer isRoot>
+		<>
 			<HeroIntro />
-			<AboutIntro />
-			<OfferIntro />
-			<GalleryIntro />
-			<ImageDivider />
-			<ContactIntro />
-		</PageContainer>
+			<PageMainContainer className="lg:gap-52">
+				<AboutIntro />
+				<OfferIntro />
+				<GalleryIntro />
+				<ContactIntro />
+			</PageMainContainer>
+		</>
 	);
 }
