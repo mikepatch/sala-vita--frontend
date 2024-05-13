@@ -11,9 +11,9 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 	return (
 		<section
 			className={clsx(
-				"relative z-10 flex h-[100lvh] w-full justify-center overflow-hidden text-brand-primary",
+				"relative z-10 flex h-[100svh] w-full justify-center overflow-hidden text-brand-primary",
 				{
-					"max-h-[50lvh] pt-navbar": !isRoot,
+					"max-h-[50svh] pt-navbar": !isRoot,
 				},
 			)}
 			style={{ clipPath: "inset(0 0 0 0)" }}
