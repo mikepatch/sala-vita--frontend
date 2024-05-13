@@ -18,7 +18,7 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 			)}
 			style={{ clipPath: "inset(0 0 0 0)" }}
 		>
-			<figure className="fixed inset-0 -z-10 h-full w-full">
+			<figure className="fixed left-0 top-0 -z-10 h-[100lvh] w-full">
 				<NextImage
 					src={image}
 					fill
