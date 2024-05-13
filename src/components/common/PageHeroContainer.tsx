@@ -13,7 +13,7 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 			className={clsx(
 				"relative z-10 flex h-screen w-full justify-center overflow-hidden text-brand-primary",
 				{
-					"h-[50vh] pt-navbar": !isRoot,
+					"max-h-[50vh] pt-navbar": !isRoot,
 				},
 			)}
 			style={{ clipPath: "inset(0 0 0 0)" }}
@@ -28,6 +28,7 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 					loading="eager"
 					style={{
 						objectFit: "cover",
+						objectPosition: "center",
 					}}
 				/>
 			</figure>
