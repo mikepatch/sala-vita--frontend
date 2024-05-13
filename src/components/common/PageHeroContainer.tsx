@@ -28,7 +28,7 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 					loading="eager"
 					style={{
 						objectFit: "cover",
-						objectPosition: "center",
+						objectPosition: "bottom",
 					}}
 				/>
 			</figure>
