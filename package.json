@@ -11,6 +11,8 @@
 	"dependencies": {
 		"@googlemaps/js-api-loader": "^1.16.6",
 		"@icons-pack/react-simple-icons": "^9.4.1",
+		"@vercel/analytics": "^1.2.2",
+		"@vercel/speed-insights": "^1.0.10",
 		"clsx": "^2.1.1",
 		"framer-motion": "^11.1.7",
 		"lucide-react": "^0.367.0",
