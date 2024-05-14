@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 import "../styles/globals.css";
 import { Navigation } from "@/components/navigation/Navigation";
@@ -26,6 +28,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				<Navigation />
 				{children}
 				<Footer />
+				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);
