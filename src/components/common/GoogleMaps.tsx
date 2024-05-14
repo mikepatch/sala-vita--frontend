@@ -51,7 +51,7 @@ export const GoogleMaps = () => {
 					<div className="animate-pulse">...</div>
 				</div>
 			)}
-			<div className="h-full w-full" ref={mapRef} />
+			<div className="h-full min-h-[400px] w-full" ref={mapRef} />
 		</>
 	);
 };
