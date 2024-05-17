@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
+import { OGImageContainer } from "@/components/common/OGImageContainer";
 
 export const alt = "VITA – Sala bankietowa";
 export const size = {
@@ -16,15 +17,7 @@ if (process.env.NEXT_PUBLIC_BASE_URL === undefined) {
 export default async function OGImage() {
 	return new ImageResponse(
 		(
-			<div
-				style={{
-					width: "100%",
-					height: "100%",
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
+			<OGImageContainer>
 				<img
 					src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo-big.png`}
 					alt={alt}
@@ -33,7 +26,7 @@ export default async function OGImage() {
 						height: "100%",
 					}}
 				/>
-			</div>
+			</OGImageContainer>
 		),
 		{
 			...size,

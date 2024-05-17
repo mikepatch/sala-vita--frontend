@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
+import { OGImageContainer } from "@/components/common/OGImageContainer";
 
 export const alt = "Propozycja menu – Sala bankietowa VITA";
 export const size = {
@@ -16,17 +17,7 @@ export default async function OGImage() {
 
 	return new ImageResponse(
 		(
-			<div
-				style={{
-					width: "100%",
-					height: "100%",
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-					justifyContent: "center",
-					color: "#6d5915",
-				}}
-			>
+			<OGImageContainer>
 				<img
 					src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo-big.png`}
 					alt={alt}
@@ -37,7 +28,7 @@ export default async function OGImage() {
 				/>
 				<h1 style={{ fontSize: 100, fontWeight: 700 }}>Propozycja menu</h1>
 				<p style={{ fontSize: 24 }}>Sprawdź nasze menu</p>
-			</div>
+			</OGImageContainer>
 		),
 		{
 			...size,
