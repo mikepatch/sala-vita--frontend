@@ -16,6 +16,8 @@ export const OGImageLogo = () => {
 				left: "30px",
 				top: "30px",
 			}}
+			width={140}
+			height={150}
 		/>
 	);
 };

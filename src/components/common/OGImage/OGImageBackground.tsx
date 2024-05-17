@@ -23,6 +23,8 @@ export const OGImageBackground = () => {
 					objectFit: "cover",
 					width: "100%",
 				}}
+				width={2000}
+				height={2000}
 			/>
 			<div
 				style={{
