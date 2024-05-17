@@ -14,8 +14,8 @@ export const OGImageLogo = () => {
 				width: "140px",
 				height: "150px",
 				position: "absolute",
-				left: "2rem",
-				top: "2rem",
+				left: "3rem",
+				top: "3rem",
 			}}
 			width={140}
 			height={150}
