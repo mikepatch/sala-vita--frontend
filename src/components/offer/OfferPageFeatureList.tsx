@@ -65,6 +65,7 @@ export const OfferPageFeatureList = () => {
 								src={item.image}
 								alt={item.title}
 								fill
+								placeholder="blur"
 								loading="lazy"
 								className="object-cover object-center"
 								sizes="(max-width: 1280px) 100vw, 768px"

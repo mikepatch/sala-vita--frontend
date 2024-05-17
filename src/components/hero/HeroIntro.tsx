@@ -10,7 +10,14 @@ export const HeroIntro = () => {
 		<PageHeroContainer image={heroImg} isRoot>
 			<article className="relative z-10 flex h-full flex-col items-center justify-center gap-8 py-20 ">
 				<figure className="relative aspect-[460/470] w-[250px] md:w-[400px]">
-					<NextImage src={logoImg} alt="Logo" fill style={{ objectFit: "contain" }} priority />
+					<NextImage
+						src={logoImg}
+						alt="Logo"
+						fill
+						style={{ objectFit: "contain" }}
+						priority
+						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					/>
 				</figure>
 				<h1 className="sr-only">Sala bankietowa Vita</h1>
 				<CtaButton />

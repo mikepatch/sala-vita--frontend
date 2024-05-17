@@ -30,6 +30,7 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 						objectFit: "cover",
 						objectPosition: "center",
 					}}
+					priority
 				/>
 			</figure>
 			<div className="absolute inset-0 -mb-1 bg-gradient-hero" />

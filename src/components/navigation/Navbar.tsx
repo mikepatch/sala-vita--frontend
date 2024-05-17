@@ -23,7 +23,13 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 		>
 			<div className="mx-auto flex w-full max-w-5xl items-center justify-between">
 				<Link href="/" className="h-full">
-					<NextImage src="/images/logo-normal.png" alt="Logo" width={50} height={50} />
+					<NextImage
+						src="/images/logo-normal.png"
+						alt="Logo"
+						width={50}
+						height={50}
+						style={{ width: "auto", height: "auto" }}
+					/>
 				</Link>
 				<button
 					type="button"
