@@ -5,7 +5,7 @@ export const OGImageLogoMini = () => {
 		<img
 			src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo-mini.png`}
 			alt="Sala bankietowa VITA"
-			style={{ objectFit: "cover", height: "200px" }}
+			style={{ objectFit: "cover", height: "200px", width: "260px" }}
 			width={260}
 			height={200}
 		/>

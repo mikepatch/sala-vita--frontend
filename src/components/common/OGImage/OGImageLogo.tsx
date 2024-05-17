@@ -11,10 +11,11 @@ export const OGImageLogo = () => {
 			alt="Sala bankietowa VITA"
 			style={{
 				objectFit: "contain",
+				width: "140px",
 				height: "150px",
 				position: "absolute",
-				left: "30px",
-				top: "30px",
+				left: "2rem",
+				top: "2rem",
 			}}
 			width={140}
 			height={150}

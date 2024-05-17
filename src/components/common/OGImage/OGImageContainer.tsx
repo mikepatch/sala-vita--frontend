@@ -16,7 +16,6 @@ export const OGImageContainer = ({ children }: OGImageContainerProps) => {
 			style={{
 				alignItems: "center",
 				background: "#FBFAF5",
-				backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_URL}/images/bg-pattern.svg')`,
 				color: "#6d5915",
 				display: "flex",
 				flexDirection: "column",
