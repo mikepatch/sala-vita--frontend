@@ -9,7 +9,12 @@ import { Footer } from "@/components/footer/Footer";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"], display: "swap" });
 
+if (process.env.NEXT_PUBLIC_BASE_URL === undefined) {
+	throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
+}
+
 export const metadata: Metadata = {
+	metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
 	title: "VITA – Sala bankietowa",
 	description:
 		"Sala VITA to idealne miejsce na organizację wesela, bankietu, stypy, imprezy okolicznościowej, spotkania biznesowego, imprezy firmowej, imprezy integracyjnej, czy spotkania rodzinnego.",
