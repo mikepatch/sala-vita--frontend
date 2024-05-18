@@ -1,6 +1,6 @@
 import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
 import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
-import { GoogleMaps } from "@/components/common/GoogleMaps";
+import { GoogleMaps } from "@/components/common/GoogleMaps/GoogleMaps";
 import { ContactItemList } from "@/components/contact/ContactItemList";
 
 export const ContactIntro = () => {

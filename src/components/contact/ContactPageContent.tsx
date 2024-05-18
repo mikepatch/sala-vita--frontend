@@ -1,7 +1,7 @@
 import { ContactItemList } from "@/components/contact/ContactItemList";
 import { PageSectionContainer } from "@/components/common/PageSectionContainer";
 import { Heading } from "@/components/common/Heading";
-import { GoogleMaps } from "@/components/common/GoogleMaps";
+import { GoogleMaps } from "@/components/common/GoogleMaps/GoogleMaps";
 
 export const ContactPageContent = () => {
 	return (
