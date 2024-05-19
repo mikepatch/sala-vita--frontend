@@ -18,10 +18,9 @@ export const GoogleMaps = () => {
 			<Map
 				defaultCenter={position}
 				defaultZoom={16}
-				gestureHandling={"greedy"}
 				disableDefaultUI={true}
 				mapId={"90877ebf238920a9"}
-				style={{ minHeight: "400px", width: "100%", height: "100%" }}
+				className="h-full w-full"
 			>
 				<MarkerWithInfoWindow position={position} />
 			</Map>
