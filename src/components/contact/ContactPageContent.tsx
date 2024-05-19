@@ -16,7 +16,7 @@ export const ContactPageContent = () => {
 				</Heading>
 				<ContactItemList direction="row" />
 			</PageSectionContainer>
-			<div className="h-[400px] w-full max-w-full overflow-hidden">
+			<div className="h-[600px] w-full max-w-full overflow-hidden">
 				<GoogleMaps />
 			</div>
 		</>

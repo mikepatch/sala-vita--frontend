@@ -16,7 +16,7 @@ export const ContactIntro = () => {
 					<ContactItemList direction="column" />
 				</div>
 			</article>
-			<div className="max-w-full overflow-hidden lg:basis-1/2 lg:rounded-sm">
+			<div className="h-[600px] max-w-full overflow-hidden lg:basis-1/2 lg:rounded-sm">
 				<GoogleMaps />
 			</div>
 		</IntroSectionContainer>
