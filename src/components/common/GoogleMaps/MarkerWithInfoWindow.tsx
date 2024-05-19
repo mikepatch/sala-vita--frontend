@@ -1,4 +1,5 @@
 import { AdvancedMarker, InfoWindow, useAdvancedMarkerRef, Pin } from "@vis.gl/react-google-maps";
+import Link from "next/link";
 import { useCallback, useState } from "react";
 
 type MarkerWithInfoWindowProps = {
@@ -20,8 +21,15 @@ export const MarkerWithInfoWindow = ({ position }: MarkerWithInfoWindowProps) =>
 			</AdvancedMarker>
 
 			{infoWindowShown && (
-				<InfoWindow anchor={marker} onClose={handleClose} className="p-2">
+				<InfoWindow anchor={marker} onClose={handleClose} className="flex flex-col gap-4 p-2">
 					<h2 className="text-lg font-semibold text-brand-primary">Tu jesteśmy</h2>
+					<article className="flex flex-col gap-2">
+						<h3 className="font-semibold text-brand-primary">Sala VITA</h3>
+						<p>ul. Gminna 4, 42-261 Starcza</p>
+						<Link href="https://maps.app.goo.gl/hTUJYDz5p9s7WVAn9" className="underline">
+							Wskazówki dojazdu
+						</Link>
+					</article>
 				</InfoWindow>
 			)}
 		</>
