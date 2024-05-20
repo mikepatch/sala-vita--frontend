@@ -16,12 +16,22 @@ export const MarkerWithInfoWindow = ({ position }: MarkerWithInfoWindowProps) =>
 
 	return (
 		<>
-			<AdvancedMarker ref={markerRef} position={position} onClick={handleMarkerClick}>
+			<AdvancedMarker
+				ref={markerRef}
+				position={position}
+				onClick={handleMarkerClick}
+				title="Sala VITA - znacznik na mapie"
+			>
 				<Pin background={"#806919"} borderColor={"#806919"} glyphColor={"#fff"} />
 			</AdvancedMarker>
 
 			{infoWindowShown && (
-				<InfoWindow anchor={marker} onClose={handleClose} className="flex flex-col gap-4 p-2">
+				<InfoWindow
+					anchor={marker}
+					onClose={handleClose}
+					className="flex flex-col gap-4 p-2"
+					ariaLabel="Informacja o lokalizacji Sali Vita"
+				>
 					<h2 className="text-lg font-semibold text-brand-primary">Tu jesteśmy</h2>
 					<article className="flex flex-col gap-2">
 						<h3 className="font-semibold text-brand-primary">Sala VITA</h3>
