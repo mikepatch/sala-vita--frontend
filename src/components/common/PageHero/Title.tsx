@@ -4,7 +4,7 @@ type PageHeroTitleProps = {
 	title: string;
 };
 
-export const PageHeroTitle = ({ title }: PageHeroTitleProps) => {
+export const Title = ({ title }: PageHeroTitleProps) => {
 	return (
 		<article className="relative z-10 flex h-full flex-col items-center justify-center gap-8 py-20 ">
 			<Heading

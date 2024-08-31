@@ -28,6 +28,7 @@ export const Navbar = ({ isOpen, toggle }: Readonly<NavbarProps>) => {
 						alt="Logo"
 						width={50}
 						height={50}
+						loading="eager"
 						style={{ width: "auto", height: "auto" }}
 					/>
 				</Link>

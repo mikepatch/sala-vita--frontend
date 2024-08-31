@@ -4,8 +4,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 import "../styles/globals.css";
+import { Suspense } from "react";
 import { Navigation } from "@/components/navigation/Navigation";
 import { Footer } from "@/components/footer/Footer";
+import Loading from "@/app/loading";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"], display: "swap" });
 
@@ -31,7 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				className={`${poppins.className} overflow-x-hidden bg-white bg-bg-pattern text-brand-primary-dark antialiased`}
 			>
 				<Navigation />
-				{children}
+				<Suspense fallback={<Loading />}>{children}</Suspense>
 				<Footer />
 				<SpeedInsights />
 				<Analytics />

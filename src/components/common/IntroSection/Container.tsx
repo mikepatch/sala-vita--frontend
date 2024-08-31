@@ -3,19 +3,14 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
-type IntroSectionContainerProps = {
+type ContainerProps = {
 	children: React.ReactNode;
 	id?: string;
 	layout?: "column" | "row" | "row-reverse";
 	className?: string;
 };
 
-export const IntroSectionContainer = ({
-	children,
-	id,
-	layout = "column",
-	className,
-}: IntroSectionContainerProps) => {
+export const Container = ({ children, id, layout = "column", className }: ContainerProps) => {
 	return (
 		<motion.section
 			initial={{

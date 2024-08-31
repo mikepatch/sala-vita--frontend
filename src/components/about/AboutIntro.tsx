@@ -1,14 +1,12 @@
 import sectionImg from "../../../public/images/sala-bankietowa-vita-1.jpg";
+import { Container, Header, Image } from "@/components/common/IntroSection";
 import { LinkButton } from "@/components/common/LinkButton";
-import { IntroSectionImage } from "@/components/common/IntroSectionImage";
-import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
-import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
 
 export const AboutIntro = () => {
 	return (
-		<IntroSectionContainer layout="row">
+		<Container layout="row">
 			<article className="flex flex-col px-8 lg:max-w-lg">
-				<IntroSectionHeader title="O nas" />
+				<Header title="O nas" />
 				<div className="flex flex-col gap-6">
 					<p>
 						<strong>Sala bankietowa VITA</strong> to miejsce stworzone z myślą o organizacji
@@ -30,7 +28,7 @@ export const AboutIntro = () => {
 					</LinkButton>
 				</div>
 			</article>
-			<IntroSectionImage img={sectionImg} alt="Udekorowany stół z zastawą" />
-		</IntroSectionContainer>
+			<Image img={sectionImg} alt="Udekorowany stół z zastawą" />
+		</Container>
 	);
 };

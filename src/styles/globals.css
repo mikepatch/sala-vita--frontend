@@ -11,3 +11,9 @@
 strong {
 	@apply text-brand-primary;
 }
+
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #806919 #fbfaf5;
+}

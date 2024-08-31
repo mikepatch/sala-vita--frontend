@@ -7,7 +7,7 @@ type PageHeroProps = {
 	isRoot?: boolean;
 };
 
-export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroProps) => {
+export const Container = ({ children, image, isRoot = false }: PageHeroProps) => {
 	return (
 		<section
 			className={clsx(
@@ -22,7 +22,7 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 				<NextImage
 					src={image}
 					fill
-					placeholder="blur"
+					// placeholder="blur"
 					alt="Hero background image"
 					sizes="100vw"
 					loading="eager"
@@ -30,7 +30,6 @@ export const PageHeroContainer = ({ children, image, isRoot = false }: PageHeroP
 						objectFit: "cover",
 						objectPosition: "center",
 					}}
-					priority
 				/>
 			</figure>
 			<div className="absolute inset-0 -mb-1 bg-gradient-hero" />

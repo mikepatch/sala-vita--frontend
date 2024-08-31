@@ -1,15 +1,13 @@
 import sectionImg from "../../../public/images/sala-bankietowa-vita-6.jpg";
+import { Container, Header, Image } from "@/components/common/IntroSection";
 import { LinkButton } from "@/components/common/LinkButton";
-import { IntroSectionImage } from "@/components/common/IntroSectionImage";
-import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
-import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
 import { OfferIntroFeatureList } from "@/components/offer/OfferIntroFeatureList";
 
 export const OfferIntro = () => {
 	return (
-		<IntroSectionContainer layout="row-reverse">
+		<Container layout="row-reverse">
 			<article className="flex flex-col px-8 lg:max-w-lg">
-				<IntroSectionHeader title="Oferta" />
+				<Header title="Oferta" />
 				<div className="flex flex-col gap-6">
 					<p>
 						W <strong>VITA</strong> oferujemy kompleksową organizację wydarzeń okolicznościowych.
@@ -20,7 +18,7 @@ export const OfferIntro = () => {
 					</LinkButton>
 				</div>
 			</article>
-			<IntroSectionImage img={sectionImg} alt="Stół z zastawą" />
-		</IntroSectionContainer>
+			<Image img={sectionImg} alt="Stół z zastawą" />
+		</Container>
 	);
 };

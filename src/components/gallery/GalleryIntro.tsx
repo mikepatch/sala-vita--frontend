@@ -1,14 +1,13 @@
 import { GALLERY_IMAGES } from "@/constants";
-import { IntroSectionContainer } from "@/components/common/IntroSectionContainer";
 import { LinkButton } from "@/components/common/LinkButton";
-import { IntroSectionHeader } from "@/components/common/IntroSectionHeader";
 import { PhotoGallery } from "@/components/common/PhotoAlbum/PhotoGallery";
+import { Container, Header } from "@/components/common/IntroSection";
 
 export const GalleryIntro = () => {
 	return (
-		<IntroSectionContainer layout="row">
+		<Container layout="row">
 			<article className="flex flex-col px-8 lg:max-w-lg">
-				<IntroSectionHeader title="Galeria" />
+				<Header title="Galeria" />
 				<div className="flex flex-col gap-6">
 					<p>Zapoznaj się z naszą galerią, aby zobaczyć jak wygląda nasza sala bankietowa.</p>
 					<LinkButton href="/galeria" className="self-start">
@@ -19,6 +18,6 @@ export const GalleryIntro = () => {
 			<div className="lg:basis-1/2">
 				<PhotoGallery photos={GALLERY_IMAGES.slice(0, 6)} />
 			</div>
-		</IntroSectionContainer>
+		</Container>
 	);
 };

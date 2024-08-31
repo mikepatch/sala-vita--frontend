@@ -1,7 +1,7 @@
 import { ContactItemList } from "@/components/contact/ContactItemList";
 import { PageSectionContainer } from "@/components/common/PageSectionContainer";
 import { Heading } from "@/components/common/Heading";
-import { GoogleMaps } from "@/components/common/GoogleMaps/GoogleMaps";
+import { LocationMap } from "@/components/common/LocationMap";
 
 export const ContactPageContent = () => {
 	return (
@@ -17,7 +17,7 @@ export const ContactPageContent = () => {
 				<ContactItemList direction="row" />
 			</PageSectionContainer>
 			<div className="h-[600px] w-full max-w-full overflow-hidden">
-				<GoogleMaps />
+				<LocationMap />
 			</div>
 		</>
 	);

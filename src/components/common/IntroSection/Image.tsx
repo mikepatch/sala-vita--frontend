@@ -5,7 +5,7 @@ type IntroSectionImageProps = {
 	alt: string;
 };
 
-export const IntroSectionImage = ({ img, alt }: IntroSectionImageProps) => {
+export const Image = ({ img, alt }: IntroSectionImageProps) => {
 	return (
 		<figure className="relative h-[600px] w-full overflow-hidden lg:basis-1/2 xl:rounded-sm">
 			<NextImage
